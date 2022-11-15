@@ -1,0 +1,32 @@
+.variants {
+    grid-area: variants;
+    display: flex;
+    align-items: center;
+}
+
+.variant-big {
+    inline-size: 3rem;
+    block-size: 3rem;
+    border-radius: 50%;
+    background: var(--secondary);
+    filter: drop-shadow(2px 2px 0 #300F16);
+    margin-inline-end: 2.125rem;
+
+}
+
+.variant-yellow {
+    inline-size: 1.875rem;
+    block-size: .5rem;
+    background: #FECB2F;
+    filter: drop-shadow(2px 2px 0 #D2AB33);
+    border-radius: .5rem;
+    margin-inline-end: 1.5rem;
+}
+
+.variant-secondary {
+    inline-size: 1.875rem;
+    block-size: .5rem;
+    background: var(--secondary);
+    filter: drop-shadow(2px 2px 0 #300F16);
+    border-radius: .5rem;
+}

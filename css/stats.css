@@ -1,0 +1,6 @@
+.stats {
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: .5rem;
+    flex: 1;
+}
