@@ -60,7 +60,7 @@ const $ligth = document.querySelector('#ligth')
 
 function speech(text) {
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'es'
+    utterance.lang = 'es-US'
     speechSynthesis.speak(utterance);
 
     $ligth.classList.add('is-animated')
