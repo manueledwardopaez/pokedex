@@ -1,3 +1,4 @@
+import './charts.js'
 import { setPokemon, setInput, setDescription, setRandomPokemon, setImage } from "./pokedex.js";
 
 const $form = document.querySelector("#form");
@@ -19,6 +20,7 @@ async function handleSubmit(event) {
   event.preventDefault();
   const form = new FormData($form);
   const id = form.get("id");
+  
   try{
     activePokemon = await setPokemon(id)
   } catch {
@@ -26,21 +28,28 @@ async function handleSubmit(event) {
   }
 }
 
+
 async function handleNextPokemon() {
+    speechSynthesis.cancel() 
     const id = (activePokemon === null || activePokemon.id === 898) ? 1 : activePokemon.id + 1
     activePokemon = await setPokemon(id)
     setInput(id)
+   
 }
 
 async function handlePrevPokemon() {
+    speechSynthesis.cancel() 
     const id = (activePokemon === null || activePokemon.id === 1) ? 898 : activePokemon.id - 1
     activePokemon = await setPokemon(id)
     setInput(id)
+    
 }
 
 async function handleRandomPokemon() {
+    speechSynthesis.cancel() 
     activePokemon = await setPokemon(setRandomPokemon())
     setInput(activePokemon.id)
+     
 }
 
 let activeSprite = 0

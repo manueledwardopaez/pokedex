@@ -14,11 +14,11 @@
     <title>Pokédex</title>
   </head>
   <body>
-    <main class="pokedex is-open" tabindex="0">
+    <main class="pokedex" tabindex="0">
       <section class="pokedex-main">
         <div class="header-shadow">
           <div class="header">
-            <span class="light is-big is-sky"></span>
+            <span class="light is-big is-sky" id="ligth"></span>
             <span class="light is-red"></span>
             <span class="light is-yellow"></span>
             <span class="light is-green"></span>
@@ -69,9 +69,13 @@
         Cover front
       </div>
       <section class="cover-back" aria-label="Estadisticas">
-        <div class="stats"></div>
+        <div class="stats">
+          <canvas id="stats" width="200" height="200"></canvas>
+        </div>
       </section>
     </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js" ></script>
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>
