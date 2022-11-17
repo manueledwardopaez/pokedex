@@ -27,7 +27,9 @@
 
         <div class="screen">
           <div class="screen-border">
-            <div class="screen-safeArea"></div>
+            <div class="screen-safeArea"  id="screen">
+              <img src="" alt="" id="image">
+            </div>
             <div class="screen-buttons">
               <div class="btn-container">
                 <span class="btn-red"></span>
@@ -38,7 +40,6 @@
                 <span></span>
                 <span></span>
                 <span></span>
-               <!--  <img src="./images/btnBurguer.png" alt=""> -->
               </div>
             </div>
           </div>
@@ -46,15 +47,15 @@
 
         <div class="actions">
           <div class="variants">
-            <span class="variant-big"></span>
+            <button id="random" class="variant-big"></button>
             <span class="variant-yellow"></span>
             <span class="variant-secondary"></span>
           </div>
           <form role="search" id="form" class="search">
-            <input type="text" name="id" placeholder="¿Quién es ese pokémon?" autocomplete="off">
+            <input id="input" type="text" name="id" placeholder="¿Quién es ese pokémon?" autocomplete="off">
           </form>
           <div class="description">
-            <p>Busca un pokémon para conocer todos sus características.</p>
+            <p id="description">Busca un pokémon para conocer todos sus características.</p>
           </div>
           <div class="navigation">
             <button id="next-pokemon" class="navigation-right" aria-label="Next pokemon"></button>
@@ -71,5 +72,6 @@
         <div class="stats"></div>
       </section>
     </main>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

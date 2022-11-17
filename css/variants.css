@@ -11,7 +11,14 @@
     background: var(--secondary);
     filter: drop-shadow(2px 2px 0 #300F16);
     margin-inline-end: 2.125rem;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
 
+.variant-big:active {
+    transform: scale(.9);
 }
 
 .variant-yellow {
