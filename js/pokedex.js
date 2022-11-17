@@ -4,6 +4,7 @@ import { createChart } from "./charts.js"
 const $image = document.querySelector('#image')
 const $description = document.querySelector('#description')
 const $input = document.querySelector('#input')
+const $pokemonName = document.querySelector('#pokemon-name')
 
 export function setImage(image) {
     $image.src = image
@@ -11,6 +12,10 @@ export function setImage(image) {
 
 export function setDescription(text) {
     $description.textContent = text
+}
+
+export function setPokemonName(text) {
+    $pokemonName.textContent = text
 }
 
 export function setInput(id) {
@@ -75,6 +80,7 @@ export async function setPokemon(id) {
     loader(false)
 
     setImage(pokemon.sprites[0])
+    setPokemonName(pokemon.name)
     setDescription(pokemon.description)
     speech(`${pokemon.name}. ${pokemon.description}`)
 
